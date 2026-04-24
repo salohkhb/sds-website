@@ -29,6 +29,10 @@ export default function ContactPage() {
         body: JSON.stringify(form),
       });
 
+      if (window.fbq) {
+        window.fbq('track', 'Lead');
+      }
+
       setSuccess(true);
 
       setForm({
